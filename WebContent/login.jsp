@@ -3,8 +3,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Login</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+ <title>login</title>
+   
 <style>
 ul {
     list-style-type: none;
@@ -42,18 +47,38 @@ background-size:cover;
   <li><a href="Contact.jsp">Contact</a></li>
   <li><a href="#about">About</a></li>
    <li><a href="login.jsp">login</a></li>
-  <li></li></ul>
-  <div align="center">
-    <LABEL for="firstname">Username </LABEL>
-              <INPUT type="text" id="Username"><BR>
-    <LABEL for="lastname">Password </LABEL>
-              <INPUT type="password" id="Password"><BR>
-              <form action="Home.jsp">
-    <INPUT type="submit" value="login">     
+  <li></li></ul><br>
+  <div class="container">
+  <h2>LOG IN</h2>
+  <form class="form-horizontal" method="post" action="LoginServlet" role="form">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Email:</label>
+      <div class="col-sm-10">
+        <input type="email" name="username" class="form-control" name="name" placeholder="Enter email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Password:</label>
+      <div class="col-sm-10">
+        <input type="password" name="password" class="form-control" name="password" placeholder="Enter password">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+          <label><input type="checkbox"> Remember me</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+     
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>
 </div>
-</form>
-
-
-
+    </form>  
+    </div>
 </body>
 </html>

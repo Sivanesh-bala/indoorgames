@@ -9,7 +9,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import com.niit.indoorgames.UserDAO.*;
+
+import com.niit.indoorgames.dao.*;
 
 /**
  * Servlet implementation class LoginServlet
@@ -39,18 +40,22 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		//doGet(request, response);
 		UserDAO userDAO=new UserDAO();
-		String userid=(String) request.getParameter("userid");
-		String password=(String) request.getParameter("password");
-		if(userDAO.isValidCredentials(userid, password)==true){
-			RequestDispatcher dispatcher=request.getRequestDispatcher("Home.jsp");
+		System.out.println("welcome");
+		String Username= request.getParameter("username");
+		String Password=request.getParameter("password");
+		if(userDAO.isValidCredentials(Username, Password)==true){
+			System.out.println("new user");
+		RequestDispatcher dispatcher=request.getRequestDispatcher("Home.jsp");
+		dispatcher.forward(request, response);
 		}
 		else
 		{
-			RequestDispatcher dispatcher=request.getRequestDispatcher("login.jsp");
 			PrintWriter out=response.getWriter();
 			out.print("Invalid credential");
+			RequestDispatcher dispatcher=request.getRequestDispatcher("login.jsp");
+			
 			dispatcher.include(request, response);
 		}
 	}

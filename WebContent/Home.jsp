@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title></title>
+<title>home</title>
 </head>
 <style>
 
@@ -32,17 +32,15 @@ li a:hover {
     background-color: #111;
 }
 </style>
-<body style="background-color:BurlyWood ;">
+
+<body style="background-color:white ;">
 <ul>
   <li><a class="active" href="Home.jsp">Home</a></li>
   <li><a href="News.jsp">News</a></li>
   <li><a href="Contact.jsp">Contact</a></li>
   <li><a href="#about">About</a></li>
    <li><a href="login.jsp">login</a></li>
-  <li>
-  
-    </li>
-</ul>
+  </ul>
 <br>
 <div align="middle">
 <div class="w3-content w3-section" style="max-width:2000px">
@@ -72,10 +70,10 @@ function carousel() {
 <div align="left">
 <table style="width:50%">
   <tr>
-    <td><img alt="img" src="chess_board_with_lighting_by_swell92-d309qvz.png" height="150" width="150"></td>
-    <td><img alt="img" src="joystick_PNG11246.png" height="150" width="150"></td>
-    <td><img alt="img" src="unnamed.png" height="150" width="150"></td>
-    <td><img alt="img" src="KETTLER-Halo-Outdoor-Table-Tennis-Racquet_1.png" height="150" width="150"></td>
+    <td><img alt="img" src="chess_board_with_lighting_by_swell92-d309qvz.png"  title="Discount 15-20 %" height="150" width="150"></td>
+    <td><img alt="img" src="joystick_PNG11246.png"  title="Discount 10 %" height="150" width="150"></td>
+    <td><img alt="img" src="unnamed.png" title="Discount10-15%"  height="150" width="150"></td>
+    <td><img alt="img" src="KETTLER-Halo-Outdoor-Table-Tennis-Racquet_1.png" title="Discount 10 %" height="150" width="150"></td>
   </tr>
   
   

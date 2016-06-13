@@ -6,10 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Contact Us</title>
 </head>
-
-<body>
 <style>
-
 #header {
     background-color:SkyBlue ;
     color:black;
@@ -46,7 +43,7 @@
 </div>
 
 <div id="nav">
-<li><a class="active" href="Home.jsp">Home</a></li><br>
+<li><a class="active" href="Home.jsp">Home</a></li>
 
 </div>
 
