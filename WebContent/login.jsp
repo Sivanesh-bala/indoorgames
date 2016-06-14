@@ -47,14 +47,15 @@ background-size:cover;
   <li><a href="Contact.jsp">Contact</a></li>
   <li><a href="#about">About</a></li>
    <li><a href="login.jsp">login</a></li>
+   <li><a href="registration.jsp">Register</a></li>
   <li></li></ul><br>
   <div class="container">
   <h2>LOG IN</h2>
   <form class="form-horizontal" method="post" action="LoginServlet" role="form">
     <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Email:</label>
+      <label class="control-label col-sm-2" for="username">Email:</label>
       <div class="col-sm-10">
-        <input type="email" name="username" class="form-control" name="name" placeholder="Enter email">
+        <input type="email" name="username" class="form-control" placeholder="Enter email">
       </div>
     </div>
     <div class="form-group">

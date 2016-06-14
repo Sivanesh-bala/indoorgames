@@ -33,14 +33,19 @@ li a:hover {
 }
 </style>
 
+
 <body style="background-color:white ;">
 <ul>
+ <li><a>Welcome ${sessionScope.username}</a></li>
   <li><a class="active" href="Home.jsp">Home</a></li>
-  <li><a href="News.jsp">News</a></li>
+  <li><a href="shop.jsp">Shop</a></li>
   <li><a href="Contact.jsp">Contact</a></li>
   <li><a href="#about">About</a></li>
    <li><a href="login.jsp">login</a></li>
+   <li><a href="registration.jsp">Register</a></li>
+   
   </ul>
+  
 <br>
 <div align="middle">
 <div class="w3-content w3-section" style="max-width:2000px">

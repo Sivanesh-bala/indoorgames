@@ -3,6 +3,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
 <title>registration</title>
@@ -29,16 +34,13 @@ li a {
 }
 
 li a:hover {
-    background-color: #111;
+    background-color:black;
 }
-html{
-background:url(Fun-Family-Friendly-Indoor-Games.png)no-repeat center center fixed;
-background-size:cover;
 </style>
 <body>
 <ul>
   <li><a class="active" href="Home.jsp">Home</a></li>
-  <li><a href="News.jsp">News</a></li>
+  <li><a href="shop.jsp">Shop</a></li>
   <li><a href="Contact.jsp">Contact</a></li>
   <li><a href="#about">About</a></li>
    <li><a href="login.jsp">login</a></li>
@@ -46,23 +48,60 @@ background-size:cover;
   
     </li>
 </ul>
+<br>
 <form>
-<div align="center">
-    First Name:
-    <input type="text" name="firstname"><br>
-    Last Name:
-    <input type="text" name="lastname"><br>
-    Password:
-    <input type="password" name="pwd"><br>
-    Mail id:
-    <input type="text" name="mailid"><br>
-    Are you male or female?<br>
-    <input type="radio" name="sex" value="male">Male
-    <input type="radio" name="sex" value="female">Female<br>
+ <div class="container">
+ <div class="row">
+ <div class="col-md-6">
+ <form class="form-horizontal" action="" method="POST">
+ <fieldset>
+ <div id="legend">
+ <legend class="">Register</legend>
+</div>
+<div class="control-group">
+   <label class="control-label" for="username">Username</label>
+   <div class="controls">
+   <input type="text" id="username" name="username" placeholder="" class="form-control input-lg">
+   <p class="help-block">Username can contain any letters or numbers, without spaces</p>
+   </div>
+     </div>
+         <div class="control-group">
+              <label class="control-label" for="email">E-mail</label>
+              <div class="controls">
+                <input type="email" id="email" name="email" placeholder="" class="form-control input-lg">
+                <p class="help-block">Please provide your E-mail</p>
+              </div>
+            </div>
+         
+            <div class="control-group">
+              <label class="control-label" for="password">Password</label>
+              <div class="controls">
+                <input type="password" id="password" name="password" placeholder="" class="form-control input-lg">
+                <p class="help-block">Password should be at least 6 characters</p>
+              </div>
+            </div>
+         
+            <div class="control-group">
+              <label class="control-label" for="password_confirm">Password (Confirm)</label>
+              <div class="controls">
+                <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="form-control input-lg">
+                <p class="help-block">Please confirm password</p>
+              </div>
+            </div>
+         
+            <div class="control-group">
+              <!-- Button -->
+              <div class="controls">
+                <button class="btn btn-success">Register</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
     
-    <input type="checkbox" name="language" value="html">Agree terms and conditions<br>
-    <input type="submit" value="submit"><br>
-    </div>
-</form>
+    </div> 
+  </div>
+</div>
+   
+
 </body>
 </html>

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>News</title>
+<title>Shop</title>
 </head>
 <style>
 ul {
@@ -32,22 +32,37 @@ li a:hover {
 }
 
 html{
-background:url(NewsPaper.png)no-repeat center center fixed;
+background:url(bg-img.png)no-repeat center center fixed;
 background-size:cover;
 }
 </style>
 <body>
-<body style="background-color:BurlyWood ;">
+
 <ul>
+<li><a>Welcome ${sessionScope.username}</a></li>
   <li><a class="active" href="Home.jsp">Home</a></li>
-  <li><a href="News.jsp">News</a></li>
+  <li><a href="shop.jsp">Shop</a></li>
   <li><a href="Contact.jsp">Contact</a></li>
   <li><a href="#about">About</a></li>
    <li><a href="login.jsp">login</a></li>
+   <li><a href="registration.jsp">Register</a></li>
   <li>
   
     </li>
-</ul>
+</ul><br>
+<div align="left">
+<table style="width:100%">
+  <tr>
+    <td><img alt="img" src="chess_board_with_lighting_by_swell92-d309qvz.png"  title="Discount 15-20 %" height="150" width="150"></td>
+    <td><img alt="img" src="joystick_PNG11246.png"  title="Discount 10 %" height="150" width="150"></td>
+    <td><img alt="img" src="unnamed.png" title="Discount10-15%"  height="150" width="150"></td>
+    <td><img alt="img" src="KETTLER-Halo-Outdoor-Table-Tennis-Racquet_1.png" title="Discount 10 %" height="150" width="150"></td>
+  </tr>
+  
+  
+  
+</table>
+</div>
 
 
 
