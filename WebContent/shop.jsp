@@ -3,6 +3,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Shop</title>
 </head>
@@ -51,13 +56,23 @@ background-size:cover;
     </li>
 </ul><br>
 <div align="left">
-<table style="width:100%">
+<table style="width:105%">
   <tr>
     <td><img alt="img" src="chess_board_with_lighting_by_swell92-d309qvz.png"  title="Discount 15-20 %" height="150" width="150"></td>
     <td><img alt="img" src="joystick_PNG11246.png"  title="Discount 10 %" height="150" width="150"></td>
-    <td><img alt="img" src="unnamed.png" title="Discount10-15%"  height="150" width="150"></td>
-    <td><img alt="img" src="KETTLER-Halo-Outdoor-Table-Tennis-Racquet_1.png" title="Discount 10 %" height="150" width="150"></td>
+    <td><a href="Servletinfo?id=2" ><img alt="img" src="unnamed.png" title="Discount10-15%"  height="150" width="150"></td></a>
+    <td><a href="Servletinfo?id=1" ><img alt="img" src="KETTLER-Halo-Outdoor-Table-Tennis-Racquet_1.png" title="Discount 10 %" height="150" width="150"></td></a>
   </tr>
+  <div align="center">
+<table style="width:110%">
+  <tr><br>
+  <td><button type="button" class="btn btn-warning">Buy Now</button></td>
+  <td><button type="button" class="btn btn-warning">Buy Now</button></td>
+  <td><button type="button" class="btn btn-warning">Buy Now</button></td>
+  <td><button type="button" class="btn btn-warning">Buy Now</button></td>
+  </tr>
+  </table>
+  </div>
   
   
   

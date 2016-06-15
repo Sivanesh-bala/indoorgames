@@ -4,10 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Product info</title>
 </head>
 <body>
-<h1>product id = 500000</h1>
-
+<img src="${requestScope.img}" height="150" width="150">
+${requestScope.description}
+${requestScope.name}
 </body>
 </html>
