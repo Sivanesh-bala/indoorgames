@@ -48,7 +48,7 @@ public class CategoryController {
 
 		return mv;
 	}
-	
+
 	
 	/*@RequestMapping("/updateCategories")
 	public ModelAndView updateCategory(@ModelAttribute("category") ArrayList<Category> categories)
