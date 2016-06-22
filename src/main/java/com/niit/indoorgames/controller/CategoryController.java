@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.google.gson.Gson;
 import com.niit.indoorgames.bean.Category;
 import com.niit.indoorgames.dao.CategoryDAO;
 
@@ -44,7 +45,9 @@ public class CategoryController {
 		List<Category> categoryList = categoryDAO.getAllCategories();
 		
 		ModelAndView mv = new ModelAndView("/categoryList");
-		mv.addObject("categoryList", categoryList);
+		Gson gson = new Gson();
+			String json = gson.toJson(categoryList);
+		mv.addObject("categoryList", json);
 
 		return mv;
 	}
