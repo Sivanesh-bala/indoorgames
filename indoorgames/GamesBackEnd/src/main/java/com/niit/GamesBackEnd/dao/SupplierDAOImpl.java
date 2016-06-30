@@ -12,10 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.event.TransactionalEventListener;
-/*
+
 import com.niit.GamesBackEnd.model.Supplier;
 
-@Repository("supplierDAO")
+@Repository("supplierdao")
 public class SupplierDAOImpl implements Supplierdao {
 
 	@Autowired
@@ -41,7 +41,7 @@ public class SupplierDAOImpl implements Supplierdao {
 		sessionFactory.getCurrentSession().saveOrUpdate(supplier);
 	}
 
-	@TransactionalEventListener
+	@Transactional
 	public void delete(String id) {
 		Supplier supplier = new Supplier();
 		supplier.setId(id);
@@ -63,4 +63,4 @@ public class SupplierDAOImpl implements Supplierdao {
 	return null;
 }
 }
- */
+ 

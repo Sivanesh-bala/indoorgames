@@ -1,4 +1,4 @@
-/*package com.niit.indoorgames.controller;
+package com.niit.indoorgames.controller;
 
 import java.util.List;
 
@@ -27,4 +27,3 @@ public class SupplierController {
 	}
 
 }
-/*

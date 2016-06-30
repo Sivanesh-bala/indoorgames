@@ -38,11 +38,11 @@ li a:hover {
 <body style="background-color:white ;">
 <ul>
  <li><a>Welcome ${sessionScope.username}</a></li>
-  <li><a class="active" href="<c:url value="/"/>">Home</a></li>
-  <li><a href="<c:url value="/shop"/>">Shop</a></li>
+   <li><a class="active" href="<c:url value="/Home"/>">Home</a></li>
+   <li><a href="<c:url value="/shop"/>">Shop</a></li>
   <li><a href="<c:url value="/Contact"/>">Contact</a></li>
   <li><a href="<c:url value="/About"/>">About</a></li>
-   <li><a href="<c:url value="/login"/>">Login</a></li>
+   <li><a href="<c:url value="/"/>">Login</a></li>
    <li><a href="<c:url value="/registration"/>">Register</a></li>
    
   </ul>

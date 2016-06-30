@@ -59,8 +59,8 @@ package com.niit.GamesBackEnd.dao;
 		}
 		
 		@Transactional
-		public boolean isValidUser(String id, String password, boolean isAdmin) {
-			String hql = "from User where id=" + id + " and " + " name =" + password;
+		public boolean isValidUser(String name, String password, boolean isAdmin) {
+			String hql = "from User where name='"+name+"'"+" and "+"password='"+password+"'";
 			Query query = sessionFactory.getCurrentSession().createQuery(hql);
 			
 			@SuppressWarnings("unchecked")

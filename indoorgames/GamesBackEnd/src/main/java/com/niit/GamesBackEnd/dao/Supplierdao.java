@@ -1,4 +1,4 @@
-/* package com.niit.GamesBackEnd.dao;
+ package com.niit.GamesBackEnd.dao;
  
 
 import java.util.List;
@@ -18,4 +18,3 @@ public interface Supplierdao {
 	
 	
 	}
-*/

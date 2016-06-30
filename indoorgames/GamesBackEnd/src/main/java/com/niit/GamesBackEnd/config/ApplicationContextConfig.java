@@ -17,6 +17,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import com.niit.GamesBackEnd.dao.Categorydao;
 import com.niit.GamesBackEnd.dao.CategoryDAOImpl;
 import com.niit.GamesBackEnd.model.Category;
+import com.niit.GamesBackEnd.model.User;
 
 @Configuration
 @ComponentScan("com.niit.GamesBackEnd")
@@ -48,6 +49,8 @@ public class ApplicationContextConfig {
 	    	LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
 	    	sessionBuilder.addProperties(getHibernateProperties());
 	    	sessionBuilder.addAnnotatedClasses(Category.class);
+	    	sessionBuilder.addAnnotatedClasses(User.class);
+	    	
 	    	return sessionBuilder.buildSessionFactory();
 	    }
 	    

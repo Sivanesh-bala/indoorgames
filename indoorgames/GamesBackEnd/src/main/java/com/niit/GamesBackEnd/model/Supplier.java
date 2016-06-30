@@ -1,4 +1,4 @@
-/*package com.niit.GamesBackEnd.model;
+package com.niit.GamesBackEnd.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -45,4 +45,3 @@ public class Supplier {
 	private String address;
 	
 }
-*/

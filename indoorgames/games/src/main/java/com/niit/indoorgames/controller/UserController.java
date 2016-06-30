@@ -15,7 +15,7 @@ import com.niit.GamesBackEnd.dao.userdao;
 public class UserController {
 	@Autowired
 	userdao userdao;
-/*	@RequestMapping("/")
+	@RequestMapping("/Home")
 	public String gotohome()
 	{
 		return "Home";
@@ -25,12 +25,7 @@ public class UserController {
 	{
 		return "Contact";
 	}
-	@RequestMapping("/login")
-	public String gotoLogin()
-	{
-		return "login";
-		
-	}
+	
 	@RequestMapping("/registration")
 	public String gotoregistration()
 	{
@@ -42,9 +37,8 @@ public class UserController {
 	{
 		return "shop";
 	}
-	*/
 	@RequestMapping("/")
-	public String gotoshop()
+	public String adminHome()
 	{
 		return "login";
 	}

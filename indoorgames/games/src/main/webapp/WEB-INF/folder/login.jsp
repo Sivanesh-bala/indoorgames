@@ -44,11 +44,11 @@ background-size:cover;
 </head>
 <body>
 <ul>
-   <li><a class="active" href="<c:url value="/"/>">Home</a></li>
+   <li><a class="active" href="<c:url value="/Home"/>">Home</a></li>
    <li><a href="<c:url value="/shop"/>">Shop</a></li>
   <li><a href="<c:url value="/Contact"/>">Contact</a></li>
   <li><a href="<c:url value="/About"/>">About</a></li>
-   <li><a href="<c:url value="/login"/>">Login</a></li>
+   <li><a href="<c:url value="/"/>">Login</a></li>
    <li><a href="<c:url value="/registration"/>">Register</a></li>
    
   <li></li></ul><br>
@@ -56,9 +56,9 @@ background-size:cover;
   <h2>LOG IN</h2>
   <form:form class="form-horizontal" method="post" action="isValidUser" role="form">
     <div class="form-group">
-      <label class="control-label col-sm-2" for="username">Email:</label>
+      <label class="control-label col-sm-2" for="name">Email:</label>
       <div class="col-sm-10">
-        <input type="text" name="id" class="form-control" placeholder="Enter email">
+        <input type="text" name="name" class="form-control" placeholder="Enter email">
       </div>
     </div>
     <div class="form-group">

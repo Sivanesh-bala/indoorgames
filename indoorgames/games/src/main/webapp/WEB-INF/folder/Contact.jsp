@@ -44,7 +44,7 @@
 </div>
 
 <div id="nav">
-<li><a class="active" href="<c:url value="/"/>">Home</a></li>
+<li><a class="active" href="<c:url value="/Home"/>">Home</a></li>
 
 </div>
 

@@ -13,28 +13,23 @@
 </head>
 <body>
 
-<script>
-	var app = angular.module("myApp", []);
-	app.controller("myCtrl", function($scope) {
-		$scope.list = ${categoryList};
-		});
-</script>
-
-<table ng-app="myApp" ng-controller="myCtrl">
-<tr ng-repeat="x in list">
- 
- <td>{{x.id}}</td>
-  
- <td>{{x.name}}</td>
- 
- <td>{{x.description}}</td><td><input type="button" value="Delete Row" onclick="SomeDeleteRowFunction()"></td>
- 
- 
- <td><input type="button" value="Update Row" onclick="SomeUpdateRowFunction()"></td>
- 
- <table>
-  
+<table width="50%">
+	<tr>
+	    <th>S.No</th>
+		<th>Id</th>
+		<th>Name</th>
+		<th>Description</th>
+		
 	</tr>
+	<c:forEach items="${categoryList}" var="category" varStatus="status">
+		<tr>
+			<td align="center">${status.count}</td>
+			<td><input name="categoryList[${status.index}].id" readonly="readonly" value="${category.id}"/></td>
+			<td><input name="categoryList[${status.index}].name" value="${category.name}"/></td>
+			<td><input name="categoryList[${status.index}].address" value="${category.description}"/></td>
+			
+		</tr>
+	</c:forEach>
 </table>
 
 </body>

@@ -13,7 +13,7 @@ public interface userdao {
 
 		public void delete(String id);
 		
-		public boolean isValidUser(String id, String name, boolean isAdmin);
+		public boolean isValidUser(String name, String password, boolean isAdmin);
 
 
 }
