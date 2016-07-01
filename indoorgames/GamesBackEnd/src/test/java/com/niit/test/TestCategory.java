@@ -22,7 +22,7 @@ package com.niit.test;
 			category.setDescription("This is Mobile");
 			
 			categorydao.saveOrUpdate(category);
-			/*categorydao.delete("1");*/
+			categorydao.delete("1");
 			
 			
 	}

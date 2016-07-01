@@ -27,6 +27,8 @@
 			<td><input name="categoryList[${status.index}].id" readonly="readonly" value="${category.id}"/></td>
 			<td><input name="categoryList[${status.index}].name" value="${category.name}"/></td>
 			<td><input name="categoryList[${status.index}].address" value="${category.description}"/></td>
+			<td><a href="<c:url value='category/remove/${category.id}' />">Delete</a></td>
+			
 			
 		</tr>
 	</c:forEach>

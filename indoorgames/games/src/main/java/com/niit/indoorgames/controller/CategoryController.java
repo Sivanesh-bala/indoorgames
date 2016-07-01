@@ -5,7 +5,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -52,8 +54,21 @@ public class CategoryController {
 		mv.addObject("categoryList", categoryList);
 		
 		return mv;
+		
 	}
-
+	@RequestMapping("category/remove/{id}")
+    public String deleteCategory(@PathVariable("id") String id,ModelMap model) throws Exception{
+		
+       try {
+		categorydao.delete(id);
+		model.addAttribute("message","Successfully Added");
+	} catch (Exception e) {
+		model.addAttribute("message",e.getMessage());
+		e.printStackTrace();
+	}
+       //redirectAttrs.addFlashAttribute(arg0, arg1)
+        return "redirect:/categories";
+    }
 }
 
 
