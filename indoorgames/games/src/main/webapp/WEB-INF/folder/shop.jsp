@@ -45,7 +45,7 @@ background-size:cover;
 <body>
 
 <ul>
-<li><a>Welcome ${sessionScope.username}</a></li>
+<li><a>Welcome</a></li>
    <li><a class="active" href="<c:url value="/Home"/>">Home</a></li>
    <li><a href="<c:url value="/shop"/>">Shop</a></li>
   <li><a href="<c:url value="/Contact"/>">Contact</a></li>
@@ -62,8 +62,8 @@ background-size:cover;
   <tr>
     <td><img alt="img" src="<c:url value="/resources/chess.jpg"/>"  title="Discount 15-20 %" height="150" width="150"></td>
     <td><img alt="img" src="<c:url value="/resources/s-l1000.jpg"/>"  title="Discount 10 %" height="150" width="150"></td>
-    <td><a href="Servletinfo?id=2" ><img alt="img" src="unnamed.png" title="Discount10-15%"  height="150" width="150"></td></a>
-    <td><a href="Servletinfo?id=1" ><img alt="img" src="KETTLER-Halo-Outdoor-Table-Tennis-Racquet_1.png" title="Discount 10 %" height="150" width="150"></td></a>
+    <td><img alt="img" src="<c:url value="/resources/uno-cards.jpg"/>" title="Discount10-15%"  height="150" width="150"></td></a>
+    <td><img alt="img" src="<c:url value="/resources/slipstream-star-oak.jpg"/>" title="Discount 10 %" height="150" width="150"></td></a>
   </tr>
   <div align="center">
 <table style="width:110%">

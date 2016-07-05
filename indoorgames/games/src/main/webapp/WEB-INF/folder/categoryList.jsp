@@ -13,6 +13,33 @@
 </head>
 <body>
 
+<h2>ADD Category</h2>
+
+	<form:form action="addCategory" method="post">
+		<table>
+			<tr>
+				<td>Category ID:</td>
+				<td><input type="text" name="id"></td>
+			</tr>
+			<tr>
+				<td>Category Name:</td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<td>Category Description:</td>
+				<td><input type="text" name="description"></td>
+			</tr>
+
+			<tr>
+				<td><input type="submit" value="Add">
+				<td><input type="reset" value="Reset">
+			</tr>
+			
+		</table>
+
+	</form:form><br>
+
+
 <table width="50%">
 	<tr>
 	    <th>S.No</th>
@@ -27,12 +54,14 @@
 			<td><input name="categoryList[${status.index}].id" readonly="readonly" value="${category.id}"/></td>
 			<td><input name="categoryList[${status.index}].name" value="${category.name}"/></td>
 			<td><input name="categoryList[${status.index}].address" value="${category.description}"/></td>
+			<td><a href="<c:url value='category/edit/${category.id}' />">Edit</a></td>
 			<td><a href="<c:url value='category/remove/${category.id}' />">Delete</a></td>
 			
 			
 		</tr>
 	</c:forEach>
 </table>
+	
 
 </body>
 

@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -69,6 +70,18 @@ public class CategoryController {
        //redirectAttrs.addFlashAttribute(arg0, arg1)
         return "redirect:/categories";
     }
-}
+	@RequestMapping("category/edit/{id}")
+    public String editCategory(@PathVariable("id") String id, Model model){
+    	System.out.println("editCategory");
+        model.addAttribute("category", this.categorydao.get(id));
+        model.addAttribute("listCategorys", this.categorydao.list());
+        return "AdminHome";
+    }
+	}
+
+
+
+
+
 
 

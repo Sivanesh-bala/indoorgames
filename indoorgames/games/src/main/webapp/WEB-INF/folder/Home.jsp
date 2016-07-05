@@ -37,7 +37,7 @@ li a:hover {
 
 <body style="background-color:white ;">
 <ul>
- <li><a>Welcome ${sessionScope.username}</a></li>
+ <li><a>Welcome </a></li>
    <li><a class="active" href="<c:url value="/Home"/>">Home</a></li>
    <li><a href="<c:url value="/shop"/>">Shop</a></li>
   <li><a href="<c:url value="/Contact"/>">Contact</a></li>
@@ -51,8 +51,8 @@ li a:hover {
 <div align="middle">
 <div class="w3-content w3-section" style="max-width:2000px">
   <img class="mySlides" src="<c:url value="/resources/uno-cards.jpg"/>" style="width:1350px;height:330px;">
-  <img class="mySlides" src="Game_sports_UNO_cards_fun_entertainment_play-512.png" style="width:1350px;height:330px;">
-  <img class="mySlides" src="jumpers.png" style="width:1350px;height:330px;">
+  <img class="mySlides" src="<c:url value="/resources/Types To Do2.jpg"/>" style="width:1350px;height:330px;">
+  <img class="mySlides" src="<c:url value="/resources/original.jpg"/>" style="width:1350px;height:330px;">
 </div>
 
 
@@ -74,12 +74,12 @@ function carousel() {
 </script>
 <h1>Discounts on</h1>
 <div align="left">
-<table style="width:50%">
+<table style="width:105%">
   <tr>
-    <td><img alt="img" src="<c:url value="/resources/indoor-games-01.jpg"/>"  title="Discount 15-20 %" height="150" width="150"></td>
-    <td><img alt="img" src="joystick_PNG11246.png"  title="Discount 10 %" height="150" width="150"></td>
-    <td><img alt="img" src="unnamed.png" title="Discount10-15%"  height="150" width="150"></td>
-    <td><img alt="img" src="KETTLER-Halo-Outdoor-Table-Tennis-Racquet_1.png" title="Discount 10 %" height="150" width="150"></td>
+    <td><img alt="img" src="<c:url value="/resources/slipstream-star-oak.jpg"/>"  title="Discount 15-20 %" height="150" width="150"></td>
+    <td><img alt="img" src="<c:url value="/resources/chess.jpg"/>"  title="Discount 10 %" height="150" width="150"></td>
+    <td><img alt="img" src="<c:url value="/resources/s-l1000.jpg"/>" title="Discount10-15%"  height="150" width="150"></td>
+    <td><img alt="img" src="<c:url value="/resources/uno-cards.jpg"/>" title="Discount 10 %" height="150" width="150"></td>
   </tr>
   
   
