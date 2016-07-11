@@ -12,8 +12,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class Supplier {
 	
+	
 	@Id
-	@Column(name="id")
+	@Column(name="ID")
 	private String id;
 	
 	public String getId() {

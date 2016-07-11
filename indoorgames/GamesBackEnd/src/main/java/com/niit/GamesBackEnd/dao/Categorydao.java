@@ -13,6 +13,8 @@ public interface Categorydao {
 	public void saveOrUpdate(Category category);
 
 	public void delete(String id);
+	
+	public 	Category getByName(String name);
 
 
 }

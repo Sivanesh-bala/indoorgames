@@ -68,10 +68,10 @@ background-size:cover;
   <div align="center">
 <table style="width:110%">
   <tr><br>
-  <td><button type="button" class="btn btn-warning">Buy Now</button></td>
-  <td><button type="button" class="btn btn-warning">Buy Now</button></td>
-  <td><button type="button" class="btn btn-warning">Buy Now</button></td>
-  <td><button type="button" class="btn btn-warning">Buy Now</button></td>
+  <td><button type="button" class="btn btn-warning">Add To Cart</button></td>
+  <td><button type="button" class="btn btn-warning">Add To Cart</button></td>
+  <td><button type="button" class="btn btn-warning">Add To Cart</button></td>
+  <td><button type="button" class="btn btn-warning">Add To Cart</button></td>
   </tr>
   </table>
   </div>

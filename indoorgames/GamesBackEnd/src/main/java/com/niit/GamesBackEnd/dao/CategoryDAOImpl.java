@@ -11,7 +11,77 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.niit.GamesBackEnd.model.Category;
 
-@Repository("categorydao")
+@Repository("categoryDAO")
+public class CategoryDAOImpl implements Categorydao {
+	
+
+	@Autowired
+	private SessionFactory sessionFactory;
+
+
+	public CategoryDAOImpl(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+
+	@Transactional
+	public List<Category> list() {
+		
+		List<Category> listCategory = (List<Category>) 
+		          sessionFactory.getCurrentSession()
+				.createCriteria(Category.class)
+				.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
+
+		return listCategory;
+	}
+
+	@Transactional
+	public void saveOrUpdate(Category category) {
+		sessionFactory.getCurrentSession().saveOrUpdate(category);
+	}
+
+	@Transactional
+	public void delete(String id) {
+		Category CategoryToDelete = new Category();
+		CategoryToDelete.setId(id);
+		sessionFactory.getCurrentSession().delete(CategoryToDelete);
+	}
+
+	@Transactional
+	public Category get(String id) {
+		String hql = "from Category where id=" + "'"+ id +"'";
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		
+		@SuppressWarnings("unchecked")
+		List<Category> listCategory = (List<Category>) query.list();
+		
+		if (listCategory != null && !listCategory.isEmpty()) {
+			return listCategory.get(0);
+		}
+		
+		return null;
+	}
+	
+	
+	@Transactional
+	public Category getByName(String name) {
+		String hql = "from Category where name=" + "'"+ name +"'";
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		
+		@SuppressWarnings("unchecked")
+		List<Category> listCategory = (List<Category>) query.list();
+		
+		if (listCategory != null && !listCategory.isEmpty()) {
+			return listCategory.get(0);
+		}
+		
+		return null;
+	}
+
+
+}
+
+
+/*@Repository("categorydao")
 public class CategoryDAOImpl implements Categorydao {
 
 	@Autowired
@@ -59,4 +129,19 @@ public class CategoryDAOImpl implements Categorydao {
 		return null;
 	}
 	
+	@Transactional
+	public Category getByName(String name) {
+		String hql = "from Category where name= '" + name + "'";
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		
+		@SuppressWarnings("unchecked")
+		List<Category> listCategory = (List<Category>) query.list();
+		
+		if (listCategory != null && !listCategory.isEmpty()) {
+			return listCategory.get(0);
+		}
+		
+		return null;
+	}
 }
+*/
