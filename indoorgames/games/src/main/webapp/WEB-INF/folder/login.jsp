@@ -58,7 +58,7 @@ background-size:cover;
     <div class="form-group">
       <label class="control-label col-sm-2" for="name">Email:</label>
       <div class="col-sm-10">
-        <input type="text" name="name" class="form-control" placeholder="Enter email">
+        <input type="text" name="name" class="form-control" placeholder="Enter email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
       </div>
     </div>
     <div class="form-group">
