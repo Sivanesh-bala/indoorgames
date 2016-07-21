@@ -1,20 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
- 
-  <meta charset="utf-8">
+ <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>home</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<title>new user</title>
 </head>
 <style>
-
 ul {
 
     list-style-type: none;
@@ -46,22 +45,34 @@ li a:hover {
       margin: auto;
   }
 </style>
-
-
-<body style="background-color:white ;">
+<body>
 <ul>
- <li><a>Welcome </a></li>
+ 
   <li><a class="active" href="<c:url value="/"/>">Home</a></li>
    <li><a href="<c:url value="/Contact"/>">Contact</a></li>
    <li><a href="<c:url value="/login"/>">Login</a></li>
    <li><a href="memberShip.obj">Register</a></li>
    <li><a class="active" href="<c:url value="/main"/>"><span class="glyphicon glyphicon-shopping-cart">Cart</span></a></li>
-   <li><a href="<c:url value="/adminHome"/>">Admin</a></li>
+  
    
   </ul>
-
   
-<div class="container">
+  <fieldset>
+			
+			<!-- here the href's value will be used to decide the 
+					 controller to be executed on click of this link.
+					 here "home" is mapped in spring mvc controller-->
+		
+			<br />
+			<h2>
+				<!-- display the userId just entered -->
+				Welcome ${userDetails.name }
+			</h2>
+			<br />
+		</fieldset>
+	</div>
+  
+  <div class="container">
   <br>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -103,34 +114,9 @@ li a:hover {
       <span class="sr-only">Next</span>
     </a>
   </div>
-
-
-<h1>New Arrival</h1>
-<div align="left">
-<table style="width:105%">
-  <tr>
-    <td><img alt="img" src="<c:url value="/resources/slipstream-star-oak.jpg"/>"   height="150" width="150"></td>
-    <td><img alt="img" src="<c:url value="/resources/chess.jpg"/>"   height="150" width="150"></td>
-    <td><img alt="img" src="<c:url value="/resources/s-l1000.jpg"/>"   height="150" width="150"></td>
-    <td><img alt="img" src="<c:url value="/resources/card-06.jpg"/>" height="150" width="150"></td>
-  </tr>
   
- 
-</div>
-  
-  
-</table>
-</div>
- 
-        
-</div>
 
-<br>
-<br>
- <%@ include file="Footer.jsp" %>
- 
- 
-
+	</div>
 
 </body>
 </html>

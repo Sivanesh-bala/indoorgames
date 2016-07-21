@@ -16,6 +16,31 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Products</title>
 <style>
+ul {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
 table { 
   width: 100%; 
   border-collapse: collapse; 
@@ -26,7 +51,7 @@ tr:nth-of-type(odd) {
 }
 th { 
   background: #333; 
-  color: white; 
+  color: blue; 
   font-weight: bold; 
 }
 td, th { 
@@ -52,28 +77,25 @@ font-weight: bold; /* Make sure they're bold */
 td {
 background: #FAFAFA; /* Lighter grey background */
 text-align: center; /* Center our text */
-}/*
-
-/*table {
-    border-collapse: collapse;
-    width: 100%;
 }
 
-th, td {
-    text-align: left;
-    padding: 8px;
-}
 
-tr:nth-child(even){background-color: #f2f2f2}
-
-th {
-    background-color: #4CAF50;
-    color: white;
-}*/
 
 </style>
 </head>
 <body>
+
+<ul>
+ <li><a>Welcome </a></li>
+   <li><a class="active" href="<c:url value="/"/>">Home</a></li>
+   
+  <li><a href="<c:url value="/Contact"/>">Contact</a></li>
+   <li><a href="<c:url value="/login"/>">Login</a></li>
+   <li><a href="memberShip.obj">Register</a></li>
+   <li><a class="active" href="<c:url value="/main"/>"><span class="glyphicon glyphicon-shopping-cart">Cart</span></a></li>
+   
+  </ul>
+  
 	<h1>Add a Product</h1>
 
 	<c:url var="addAction" value="/product/add"></c:url>
@@ -90,7 +112,7 @@ th {
 						</td>
 					</c:when>
 					<c:otherwise>
-						<td><form:input path="id" pattern= "[0-9]+" required="true"  /></td>
+						<td><form:input path="id" pattern= "[0-9]+" title="use only numbers" required="true"  /></td>
 					</c:otherwise>
 				</c:choose>
 			<tr>
@@ -98,7 +120,7 @@ th {
 				<td><form:label path="name">
 						<spring:message text="Name" />
 					</form:label></td>
-				<td><form:input path="name" pattern="[a-z]" required="true"  /> </td>
+				<td><form:input path="name"  required="true"  /> </td>
 			</tr>
 			
 			
@@ -137,6 +159,7 @@ th {
 					</c:if> <c:if test="${empty product.name}">
 						<input type="submit" value="<spring:message text="Add Product"/>" />
 					</c:if></td>
+					
 			</tr>
 		</table>
 	</form:form>
@@ -164,9 +187,16 @@ th {
 					<td>${product.supplier.name}</td>
 					<td><a href="<c:url value='product/edit/${product.id}' />">Edit</a></td>
 					<td><a href="<c:url value='product/remove/${product.id}' />">Delete</a></td>
-				</tr>
+					</tr>
+					<tr><a href="Upload"
+       type="button" class="btn btn-link">Upload</a></tr>
+					
 			</c:forEach>
 		</table>
 	</c:if>
+	
+	<br>
+<br>
+ <%@ include file="Footer.jsp" %>
 </body>
 </html>

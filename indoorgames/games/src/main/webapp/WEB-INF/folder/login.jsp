@@ -44,12 +44,13 @@ background-size:cover;
 </head>
 <body>
 <ul>
-   <li><a class="active" href="<c:url value="/Home"/>">Home</a></li>
-   <li><a href="<c:url value="/shop"/>">Shop</a></li>
+   <li><a class="active" href="<c:url value="/"/>">Home</a></li>
+  
   <li><a href="<c:url value="/Contact"/>">Contact</a></li>
-  <li><a href="<c:url value="/About"/>">About</a></li>
-   <li><a href="<c:url value="/"/>">Login</a></li>
-   <li><a href="<c:url value="/registration"/>">Register</a></li>
+   <li><a href="<c:url value="/login"/>">Login</a></li>
+   <li><a href="memberShip.obj">Register</a></li>
+   <li><a class="active" href="<c:url value="/main"/>"><span class="glyphicon glyphicon-shopping-cart">Cart</span></a></li>
+   
    
   <li></li></ul><br>
   <div class="container">
@@ -58,7 +59,7 @@ background-size:cover;
     <div class="form-group">
       <label class="control-label col-sm-2" for="name">Email:</label>
       <div class="col-sm-10">
-        <input type="text" name="name" class="form-control" placeholder="Enter email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+        <input type="text" name="name" title="must be in this format:someone@mail.com" class="form-control" placeholder="Enter email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"> 
       </div>
     </div>
     <div class="form-group">
@@ -77,12 +78,20 @@ background-size:cover;
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
      
-        <button type="submit" class="btn btn-default">Submit</button>
+     <button type="submit" class="btn btn-default">Submit</button>
+     
+       
+            </div>
+      
+        
       </div>
     </div>
   </form>
 </div>
     </form:form>  
     </div>
+   <br>
+<br>
+ <%@ include file="Footer.jsp" %>
 </body>
 </html>

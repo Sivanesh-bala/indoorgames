@@ -15,7 +15,7 @@ import com.niit.GamesBackEnd.dao.userdao;
 public class UserController {
 	@Autowired
 	userdao userdao;
-	@RequestMapping("/Home")
+	@RequestMapping("/")
 	public String gotohome()
 	{
 		return "Home";
@@ -24,6 +24,12 @@ public class UserController {
 	public String gotoContact()
 	{
 		return "Contact";
+	}
+
+	@RequestMapping("/main")
+	public String gotomain()
+	{
+		return "main";
 	}
 	
 	@RequestMapping("/registration")
@@ -37,7 +43,7 @@ public class UserController {
 	{
 		return "shop";
 	}
-	@RequestMapping("/")
+	@RequestMapping("/login")
 	public String adminHome()
 	{
 		return "login";
@@ -52,10 +58,10 @@ public class UserController {
 		if (userdao.isValidUser(name, password,true)) 
 		{
 			message = "Valid credentials";
-			 mv = new ModelAndView("adminHome");
+			 mv = new ModelAndView("shop");
 		} else {
 			message = "Invalid credentials";
-			 mv = new ModelAndView("Home");
+			 mv = new ModelAndView("login");
 		}
 
 		//ModelAndView mv = new ModelAndView("success");
@@ -66,7 +72,24 @@ public class UserController {
 	}
 
 
+	@RequestMapping("/Upload")
+	public String gotoUpload()
+	{
+		return "Upload";
+	}
 
+	@RequestMapping("/mainone")
+	public String gotomainone()
+	{
+		return "mainone";
+	}
+	
+	@RequestMapping("/adminHome")
+	public String gotoadminHome()
+	{
+		return "adminHome";
+	}
+	
 
 }
 

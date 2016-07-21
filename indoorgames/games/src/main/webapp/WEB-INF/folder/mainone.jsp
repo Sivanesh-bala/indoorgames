@@ -82,14 +82,14 @@ li a:hover {
                 <div class="col-md-8 showcase">
                     <div class="flexslider">
                           <ul class="slides">
-                            <li> <img src="<c:url value="/resources/chess.jpg"/>" style="width:500px;height:330px;">
+                            <li> <img src="<c:url value="/resources/s-l1000.jpg"/>" style="width:500px;height:330px;">
                              <h3>product details</h3>
                         <ul>
-                            <li class="dec">Folding Square chess board and pieces set</li><br>
+                            <li class="dec">wooden solitaire set</li><br>
                            <li class="dec">Material:Wood</li><br>
                             <li class="dec">Size: 3.5 x 7 inches</li><br>
-                           <li class="dec">Folding Hand carved Indian Wooden chess set with Brown Colour</li><br>
-                            <li class="dec">Lovely Handcrafted Chess board for your living room.</li><br>
+                           <li class="dec">Folding Hand carved Indian Wooden solitaire set with Brown Colour</li><br>
+                            <li class="dec">Lovely Handcrafted solitaire for your living room.</li><br>
                             </ul>
                       
                         <div class="clearfix"></div>
@@ -98,9 +98,9 @@ li a:hover {
                 <div class="col-md-4 showcase">
                     <div class="showcase-rt-top">
                         <div class="pull-left shoe-name">
-                            <h3>Chess Board</h3>
+                            <h3>wooden solitaire</h3>
                             <p>Full Wooden Work</p>
-                            <h4>&#8377;750</h4>
+                            <h4>&#8377;549</h4>
                         </div>
                      
                         <div class="clearfix"></div>

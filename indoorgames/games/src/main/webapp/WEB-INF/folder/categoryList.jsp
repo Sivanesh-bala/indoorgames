@@ -10,13 +10,92 @@
 <head>
 <script
 	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Categories</title>
 </head>
-<body>
-<c:url var="addAction" value="/category/add"></c:url>
+<style>
+ul {
 
-	<form:form action="${addAction}" commandName="category">
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+th { 
+  background: #333; 
+  color: blue; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
+/*table { 
+color: #333; /* Lighten up font color */
+font-family: Helvetica, Arial, sans-serif; /* Nicer font */
+width: 640px; 
+border-collapse: 
+collapse; border-spacing: 0; 
+}
+
+td, th { border: 1px solid #CCC; height: 30px; } /* Make cells a bit taller */
+
+th {
+background: #F3F3F3; /* Light grey background */
+font-weight: bold; /* Make sure they're bold */
+}
+
+td {
+background: #FAFAFA; /* Lighter grey background */
+text-align: center; /* Center our text */
+}/*
+
+</style>
+<body>
+<ul>
+ <li><a>Welcome </a></li>
+   <li><a class="active" href="<c:url value="/"/>"><span class="glyphicon glyphicon-home"></span></a></li>
+   <li><a href="<c:url value="/shop"/>">Shop</a></li>
+  <li><a href="<c:url value="/Contact"/>">Contact</a></li>
+   <li><a href="<c:url value="/login"/>">Login</a></li>
+   <li><a href="memberShip.obj">Register</a></li>
+   <li><a class="active" href="<c:url value="/main"/>"><span class="glyphicon glyphicon-shopping-cart">Cart</span></a></li>
+   
+  </ul>
+<h1>Add a category</h1>
+<c:url var="addAction" value="/category/add"></c:url>
+<form:form action="${addAction}" commandName="category">
 		<table>
 			
 			<tr>
@@ -30,7 +109,7 @@
 					</c:when>
 
 					<c:otherwise>
-						<td><form:input path="id" pattern= "[0-9]+"  required="true"  /></td>
+						<td><form:input path="id" title="use only numbers" pattern= "[0-9]+"  required="true"  /></td>
 					</c:otherwise>
 				</c:choose>
 			<tr>
@@ -38,7 +117,7 @@
 				<td><form:label path="name">
 						<spring:message text="Name" />
 					</form:label></td>
-				<td><form:input path="name"  required="true" /></td>
+				<td><form:input path="name" pattern="[a-zA-Z\s]+" title="do not use numbers" required="true" /></td>
 			</tr>
 			<tr>
 				<td><form:label path="description">
@@ -79,5 +158,9 @@
 		</table>
 	</c:if>
 </div>
+	
+	<br>
+<br>
+ <%@ include file="Footer.jsp" %>
 </body>
 </html>

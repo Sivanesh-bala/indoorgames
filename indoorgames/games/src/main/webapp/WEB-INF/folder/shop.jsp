@@ -45,33 +45,55 @@ background-size:cover;
 <body>
 
 <ul>
-<li><a>Welcome</a></li>
-   <li><a class="active" href="<c:url value="/Home"/>">Home</a></li>
+
+ <li><a>Welcome </a></li>
+   <li><a class="active" href="<c:url value="/"/>">Home</a></li>
    <li><a href="<c:url value="/shop"/>">Shop</a></li>
   <li><a href="<c:url value="/Contact"/>">Contact</a></li>
-  <li><a href="<c:url value="/About"/>">About</a></li>
-   <li><a href="<c:url value="/"/>">Login</a></li>
-   <li><a href="<c:url value="/registration"/>">Register</a></li>
    
-  <li>
-  
-    </li>
+    <li><a href="memberShip.obj">Register</a></li>
+    <li><a class="active" href="<c:url value="/main"/>"><span class="glyphicon glyphicon-shopping-cart">Cart</span></a></li>
+   
+    
 </ul><br>
+ <h1>Board oriented :</h1>
 <div align="left">
 <table style="width:105%">
   <tr>
-    <td><img alt="img" src="<c:url value="/resources/chess.jpg"/>"  title="Discount 15-20 %" height="150" width="150"></td>
-    <td><img alt="img" src="<c:url value="/resources/s-l1000.jpg"/>"  title="Discount 10 %" height="150" width="150"></td>
-    <td><img alt="img" src="<c:url value="/resources/uno-cards.jpg"/>" title="Discount10-15%"  height="150" width="150"></td></a>
-    <td><img alt="img" src="<c:url value="/resources/slipstream-star-oak.jpg"/>" title="Discount 10 %" height="150" width="150"></td></a>
+    <td><a href="<c:url value="/main"/>"><img alt="img" src="<c:url value="/resources/chess.jpg"/>"  title="Click to view" height="150" width="150"></a></td>
+    <td><a href="<c:url value="/mainone"/>"><img alt="img" src="<c:url value="/resources/s-l1000.jpg"/>"  title="Click to view" height="150" width="150"></a></td>
+    <td><img alt="img" src="<c:url value="/resources/International-Business-A-Board-Game-Kids-Toys-Games-Bonanza-Game-of-Money-7d16f2e4-0d45-4941-ab81-4b55c12fa0b2-jpg-edebdf85-84af-4e05-be60-36764d29097f.jpg"/>" title="Click to view"  height="150" width="150"></td></a>
+    <td><img alt="img" src="<c:url value="/resources/slipstream-star-oak.jpg"/>" title="Click to view" height="150" width="150"></td></a>
+    
   </tr>
   <div align="center">
 <table style="width:110%">
   <tr><br>
-  <td><button type="button" class="btn btn-warning">Add To Cart</button></td>
-  <td><button type="button" class="btn btn-warning">Add To Cart</button></td>
-  <td><button type="button" class="btn btn-warning">Add To Cart</button></td>
-  <td><button type="button" class="btn btn-warning">Add To Cart</button></td>
+  <td> <a href="<c:url value="/main"/>"><button type="button" class="btn btn-warning">View Product</button></td>
+  <td> <a href="<c:url value="/mainone"/>"><button type="button" class="btn btn-warning">View Product</button></td>
+  <td><button type="button" class="btn btn-warning">View Product</button></td>
+  <td><button type="button" class="btn btn-warning">View Product</button></td>
+  </tr>
+  </table>
+  
+  <br>
+   <h1>Card Oriented :</h1>
+   
+<div align="left">
+<table style="width:105%">
+  <tr>
+    <td><a href="<c:url value="/main"/>"><img alt="img" src="<c:url value="/resources/060.-ms-dhoni-cricket-attax-2015-world-cup-india-base-card-19116-p.jpg"/>"  title="Click to view" height="150" width="150"></a></td>
+    <td><a href="<c:url value="/Home"/>"><img alt="img" src="<c:url value="/resources/uno-cards.jpg"/>"  title="Click to view" height="150" width="150"></a></td>
+    <td><img alt="img" src="<c:url value="/resources/cardsbic809_red-alt1-thumb.jpg"/>" title="Click to view"  height="150" width="150"></td></a>
+    <td><img alt="img" src="<c:url value="/resources/cenaauto.jpg"/>" title="Click to view" height="150" width="150"></td></a>
+  </tr>
+   <div align="center">
+<table style="width:110%">
+  <tr><br>
+  <td> <a href="<c:url value="/main"/>"><button type="button" class="btn btn-warning">View Product</button></td>         
+  <td><button type="button" class="btn btn-warning">View Product</button></td>
+  <td><button type="button" class="btn btn-warning">View Product</button></td>
+  <td><button type="button" class="btn btn-warning">View Product</button></td>
   </tr>
   </table>
   </div>
@@ -80,7 +102,10 @@ background-size:cover;
   
 </table>
 </div>
-
+<br>
+<br>
+ <%@ include file="Footer.jsp" %>
+ 
 
 
 </body>
